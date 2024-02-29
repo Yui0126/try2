@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yui Naruse's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h2>Welcome to Yui Naruse's Portfolio!</h2>
+<p>
+    <div class="profile"></div>
+</p>
+<div class="brief_description">I have a little bit of experience working as a <strong>research assistant</strong> and <b>web designer/developer</b>, currently based in Tokyo. <br>
+    Although I still lack knowledge and skills in the fields, I have been an abit learner of the related topics and find it incredibly fun to use the skills I'm learning in the real world.</div>
+<h3>Examples of My Past Projects</h3>
+<p><b>- Research on Wildlife Trade</b></p>
+    <div class="points">
+        I was in charge of <b>collecting, cleaning and analysing data</b> of wildlife trade from various sources, including well formated official data from customs/international committees, as well as non-official sources such as personal websites, media outlets. I also checked the previous research in the related field and contributed in writing and publishing the reports (English/Japanese).
+    </div>
+
+    <div class="max">
+        <img class="main_image1" src="materials/otter.png">
+        <img class="main_image1" src="materials/otter2.png" style="display:none">
+        <img class="main_image1" src="materials/exotic pet.png" style="display:none">
+    </div>
+    <div class="max">
+        <ul class="slides">
+            <li><img class="demo opacity hover-opacity-off" src="materials/otter.png" onclick="currentDiv1(1)">
+            </li>
+          <li class="slide_col4">
+            <img class="demo opacity hover-opacity-off" src="materials/otter2.png" onclick="currentDiv1(2)">
+          </li>
+          <li>
+            <img class="demo opacity hover-opacity-off" src="materials/exotic pet.png" onclick="currentDiv1(3)">
+          </li>
+        </ul>
+    </div>
+    <div style="text-align: center">-> <a href="https://drive.google.com/file/d/101HB5o3edbFXNBw2RmP_hOAGZEAU2t5F/view?usp=drive_link" target="_blank">View full report on otter trade</a></div>
+    <div style="text-align: center">-> <a href="https://drive.google.com/file/d/1GsP4jOo7ppugrcMBXk31CAGEvmMla36U/view?usp=drive_link" target="_blank">View full report on exotic pet trade</a></div>
+<div class="margin"></div>
+
+<p><b>- Statistics and Data Analysis using R</b></p>
+<div class="points">
+    I wrote a few project reports for my online statistics/data analysis courses. The projects helped me gain basic understanding in <b>basic probability theory, inferencial statistics and multiple linear regression models</b>.
+</div>
+<div class="max">
+    <img class="main_image2" src="materials/analysis.png">
+    <img class="main_image2" src="materials/inference.png" style="display:none">
+    <img class="main_image2" src="materials/regression.png" style="display:none">
+</div>
+<div class="max">
+    <ul class="slides">
+        <li><img class="demo opacity hover-opacity-off" src="materials/analysis.png" onclick="currentDiv2(1)">
+        </li>
+      <li class="slide_col4">
+        <img class="demo opacity hover-opacity-off" src="materials/inference.png" onclick="currentDiv2(2)">
+      </li>
+      <li>
+        <img class="demo opacity hover-opacity-off" src="materials/regression.png" onclick="currentDiv2(3)">
+      </li>
+    </ul>
+</div>
+<div style="text-align: center">-> <a href="https://coursera-assessments.s3.amazonaws.com/assessments/1619970188901/de9c8cc7-59c8-472d-8a3a-3ffaa2cb38fe/intro_data_prob_project_yuinaruse.html" target="_blank">View the project on Basic Data Analysis</a></div>
+<div style="text-align: center">-> <a href="https://coursera-assessments.s3.amazonaws.com/assessments/1621551362338/5b44659c-5d73-4ac3-ffae-ccb47726b7d6/stat_inf_project_yuinaruse.html" target="_blank">View the project on Statistical Inference</a></div>
+<div style="text-align: center">-> <a href="https://coursera-assessments.s3.amazonaws.com/assessments/1623032185260/efd234bc-fd20-4abf-ddee-0d04140ad19d/reg_model_project.html" target="_blank">View the project on Multiple Regression Model</a></div>
+<div class="margin"></div>
+
+<p><b>- Web Design and Development</b></p>
+<div class="points">
+    I am in charge of maintaining my workplace's website, including the design part (HTML/CSS/JS). I also made it possible to <b>search projects as well as connecting the database with another application system</b>. Main languages I used are PHP, JavaScript and SQL, but I also used Python to facilitate my work.
+</div>
+<video width="320" height="240" controls>
+    <source src="materials/search.mp4" type="video/mp4">
+  </video>
+  <div class="margin"></div>
+  <div style="text-align: center">-> <a href="https://www.icye-japan.com/program/international-work-camp/search/" target="_blank">View the actual webpage with search function</a></div>
+  <div style="text-align: center">-> <a href="https://www.icye-japan.com/program/icye-long-term-volunteering/" target="_blank">View another webpage I designed</a></div>
+  <div class="margin"></div>
+  <video width="320" height="240" controls>
+    <source src="materials/database.mp4" type="video/mp4">
+  </video>
+  <div class="margin"></div>
+  <h3>That's all for now :)</h3>
+  <p>Thank you very much for checking my portfolio! If you want to more details presented in this portfolio or are interested in getting to know my works more, please contact me anytime via <a href="https://www.linkedin.com/in/yui-naruse-004a10253/" target="_blank">LinkedIn</a>!</p>
+</body>
+  
+  <script>
+  function currentDiv1(n) {
+    showDivs1(slideIndex = n);
+  }
+
+  function currentDiv2(n) {
+    showDivs2(slideIndex = n);
+  }
+
+  function currentDiv3(n) {
+    showDivs3(slideIndex = n);
+  }
+  
+  function showDivs1(n) {
+    var i;
+    var x = document.getElementsByClassName("main_image1");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" opacity-off", "");
+    }
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " opacity-off";
+  }
+
+  function showDivs2(n) {
+    var i;
+    var x = document.getElementsByClassName("main_image2");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" opacity-off", "");
+    }
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " opacity-off";
+  }
+
+  function showDivs3(n) {
+    var i;
+    var x = document.getElementsByClassName("main_image3");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" opacity-off", "");
+    }
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " opacity-off";
+  }
+  </script>
+
+
+</body>
